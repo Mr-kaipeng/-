@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>懒人原生点击按钮加载更多(懒加载，每次加载N个)</title>
+	<style>
+	*{margin: 0;padding:0;list-style: none;}
+	body{background: #333;font-size: 14px;font-family:"微软雅黑"}
+	a{color: #333;text-decoration: none;}
+	.hidden{ display: none;}
+	.lanren{width: 800px;height: auto;margin:0 auto;overflow: hidden;text-align: left;background:#fff;padding:5px;}
+	.lanren ul.list{overflow: hidden;}
+	.lanren ul.list li{width: 150px;height: 150px;margin:5px;float: left;overflow: hidden;}
+	.lanren ul.list li img{width: 100%;height: 100%;}
+	.lanren ul.list p{text-align: center;padding: 10px;}
+	.lanren .more{overflow: hidden;padding:10px;text-align: center;}
+	.lanren .more a{display: block;width: 80px;padding:8px 0;color:#fff;margin:0 auto;background:#333;text-align:center;border-radius:3px;}
+	.lanren .more a:hover{text-decoration: none;background: red;color: #fff;}
+	</style>
+</head>
+<body>
+<div style="margin:auto;width:830px;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 详情页banner -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:830px;height:120px"
+     data-ad-client="ca-pub-4078329886972765"
+     data-ad-slot="4189420132"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>	<!--代码部分begin-->
+	<div class="lanren">
+		<div class="hidden">
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+			<li><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" realSrc="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" width="150" height="150" /></li>
+		</div>
+		<ul class="list">数据加载中，请稍后...</ul>
+		<div class="more"><a href="javascript:;" onClick="javascript:loadMore();">加载更多</a></div>
+	</div>
+	<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>
+	<script>
+		var _default = 10; //默认显示图片个数
+		var _loading = 5; //每次点击按钮后加载的个数
+		var _content = [];//用来存储li循环内容
+		function init(){
+			var lis = $(".lanren .hidden li");
+			$(".lanren ul.list").html("");
+			for(var n=0;n<_default;n++){
+				lis.eq(n).appendTo(".lanren ul.list");
+			}
+			$(".lanren ul.list img").each(function(){
+				$(this).attr('src',$(this).attr('realSrc'));
+			})
+			for(var i=_default;i<lis.length;i++){
+				_content.push(lis.eq(i));
+			}
+			$(".lanren .hidden").html("");
+		}
+		init();
+		function loadMore(){
+			var k =0,t,i;
+			var mLis = $(".lanren ul.list li").length;
+			for(i= mLis-_default;i<mLis-_loading;i++){
+				if(i == _content.length){
+					$('.lanren .more').html("<p>全部加载完毕...</p>");
+					break;
+				}
+				_content[i].appendTo(".lanren ul.list");
+				t = mLis + k;
+				k++;
+				$(".lanren ul.list img").eq(t).each(function(){
+					$(this).attr('src',$(this).attr('realSrc'));
+				});
+			}
+		}
+	</script>
+    <!--代码部分end-->
+</body>
+</html>
